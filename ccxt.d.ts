@@ -111,7 +111,7 @@ declare module 'ccxt' {
 
         fetch (url: string, method: string, headers?: any, body?: any): Promise<any>;
         handleResponse (url: string, method: string, headers?: any, body?: any): any;
-        loadMarkets (reload?: boolean): Promise<Market[]>;
+        loadMarkets (reload?: boolean): Promise<{[market: string]: Market}>;
         fetchOrderStatus (id: string, market: string): Promise<string>;
         account (): any;
         commonCurrencyCode (currency: string): string;
